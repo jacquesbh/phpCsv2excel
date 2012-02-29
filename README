@@ -1,0 +1,28 @@
+phpCsv2xml
+==========
+
+Compile the PHP Archive:
+------------------------
+
+php -f make.php
+
+
+Usage:
+-----------
+
+php -f phpCsv2xml.phar "<files_path>" <zip_archive>
+
+
+Examples:
+---------
+
+    With one file:
+    --------------
+
+php -f phpCsv2xml.phar translations.csv fr_FR.zip
+
+    With more than one file:
+    ------------------------
+
+php -f phpCsv2xml.phar "fr_FR/*.csv" fr_FR.zip
+
