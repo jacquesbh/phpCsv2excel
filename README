@@ -1,4 +1,4 @@
-phpCsv2xml
+phpCsv2excel
 ==========
 
 Compile the PHP Archive:
@@ -10,7 +10,7 @@ php -f make.php
 Usage:
 -----------
 
-php -f phpCsv2xml.phar "<files_path>" <zip_archive>
+php -f phpCsv2excel.phar "<files_path>" <zip_archive>
 
 
 Examples:
@@ -19,10 +19,10 @@ Examples:
     With one file:
     --------------
 
-php -f phpCsv2xml.phar translations.csv fr_FR.zip
+php -f phpCsv2excel.phar translations.csv fr_FR.zip
 
     With more than one file:
     ------------------------
 
-php -f phpCsv2xml.phar "fr_FR/*.csv" fr_FR.zip
+php -f phpCsv2excel.phar "fr_FR/*.csv" fr_FR.zip
 
