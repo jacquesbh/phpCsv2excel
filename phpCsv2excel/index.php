@@ -105,7 +105,8 @@ if (!$zip->extractTo($tmpDestDir)) {
     exit(0);
 }
 
-$files = glob($tmpDestDir . '/' . str_replace('.zip', '', basename($zipfile)) . '/*.xml');
+$globSearch = $tmpDestDir . '/' . str_replace('.zip', '', basename($zipfile)) . '/*.xml';
+$files = glob($globSearch);
 foreach ($files as $file) {
     $newFilename = $destDir . '/' . str_replace('.xml', '.csv', basename($file));
     $csv = fopen($newFilename, 'a');
