@@ -130,7 +130,15 @@ class Excel_XML
                                 $type = 'Number';
                         endif;
                         $v = htmlentities($v, ENT_COMPAT, $this->sEncoding);
-                        $cells .= "<Cell><Data ss:Type=\"$type\">" . $v . "</Data></Cell>\n"; 
+                        $cells .= "<Cell><Data ss:Type=\"$type\">";
+                        if ($type == 'String') {
+                            $cells .= "<![CDATA[";
+                        }
+                        $cells .= $v;
+                        if ($type == 'String') {
+                            $cells .= "]]>";
+                        }
+                        $cells .= "</Data></Cell>\n";
                 endforeach;
                 $this->lines[] = "<Row>\n" . $cells . "</Row>\n";
         }

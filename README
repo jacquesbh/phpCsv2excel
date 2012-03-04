@@ -11,6 +11,7 @@ Usage:
 -----------
 
 php -f phpCsv2excel.phar "<files_path>" <zip_archive>
+php -f phpCsv2excel.phar <zip_archive> <destination_directory>
 
 
 Examples:
